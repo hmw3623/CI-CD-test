@@ -1,6 +1,7 @@
 node {
     stage ('clone') {
-        git branch: 'master', credentialsId: 'chhanz', url: 'git@gitlab.example.com:chhanz/cicd-httpd-source.git'
+	checkout scm
+	#git branch: 'master', credentialsId: 'chhanz', url: 'git@gitlab.example.com:chhanz/cicd-httpd-source.git'
     }
 
     stage ('docker build') {
